@@ -1,0 +1,5 @@
+c:\users\marko\documents\visual studio 2015\Projects\PhaserTypeScript\PhaserTypeScript\bin\PhaserTypeScript.dll.config
+c:\users\marko\documents\visual studio 2015\Projects\PhaserTypeScript\PhaserTypeScript\bin\PhaserTypeScript.dll
+c:\users\marko\documents\visual studio 2015\Projects\PhaserTypeScript\PhaserTypeScript\bin\PhaserTypeScript.pdb
+c:\users\marko\documents\visual studio 2015\Projects\PhaserTypeScript\PhaserTypeScript\obj\Debug\PhaserTypeScript.dll
+c:\users\marko\documents\visual studio 2015\Projects\PhaserTypeScript\PhaserTypeScript\obj\Debug\PhaserTypeScript.pdb
