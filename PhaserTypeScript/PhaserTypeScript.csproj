@@ -24,6 +24,8 @@
   <ItemGroup>
     <Content Include="1438216848_full.png" />
     <Content Include="app.css" />
+    <Content Include="atlas.png" />
+    <Content Include="bg.jpg" />
     <Content Include="index.html" />
     <Content Include="js\creature.js" />
     <Content Include="js\creature.min.js" />
@@ -52,6 +54,7 @@
     <Content Include="js\phaser-creature.map" />
     <Content Include="js\phaser.map" />
     <Content Include="js\pixi.map" />
+    <Content Include="atlas.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

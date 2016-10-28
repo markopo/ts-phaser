@@ -1,24 +1,33 @@
-﻿class SimpleGame {
+﻿class SimpleGame extends Phaser.Game {
 
     constructor() {
-        this.game = new Phaser.Game(960, 720, Phaser.AUTO, 'content', { preload: this.preload, create: this.create });
+        super(640, 400, Phaser.CANVAS, 'content', State);
     }
 
-    game: Phaser.Game;
+
+   
+}
+
+class State extends Phaser.State {
+
 
     preload() {
-        this.game.load.image('logo', '1438216848_full.png');
+        this.game.load.image("BG", "bg.jpg");
+        // load sprite images in atlas
+        this.game.load.atlas("Atlas", "atlas.png", "atlas.json");
     }
 
     create() {
-        var logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'logo');
-        logo.anchor.setTo(0.5, 0.5);
-        logo.scale.setTo(0.2, 0.2); 
-
-        this.game.add.tween(logo.scale).to({ x: 1, y: 1 }, 2000, Phaser.Easing.Bounce.Out, true);
+        // background
+        this.add.image(0, 0, "BG");
+        // dron sprite
+        this.add.sprite(320, 100, "Atlas", "dron1", this.world);
     }
 
+
 }
+
+
 
 window.onload = () => {
 
