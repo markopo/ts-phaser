@@ -6,6 +6,5 @@ c:\users\marko\documents\visual studio 2015\Projects\PhaserTypeScript\PhaserType
 C:\Users\marko\Documents\PHASER\PhaserTypeScript\PhaserTypeScript\bin\PhaserTypeScript.dll.config
 C:\Users\marko\Documents\PHASER\PhaserTypeScript\PhaserTypeScript\bin\PhaserTypeScript.dll
 C:\Users\marko\Documents\PHASER\PhaserTypeScript\PhaserTypeScript\bin\PhaserTypeScript.pdb
-C:\Users\marko\Documents\PHASER\PhaserTypeScript\PhaserTypeScript\obj\Debug\PhaserTypeScript.csprojResolveAssemblyReference.cache
 C:\Users\marko\Documents\PHASER\PhaserTypeScript\PhaserTypeScript\obj\Debug\PhaserTypeScript.dll
 C:\Users\marko\Documents\PHASER\PhaserTypeScript\PhaserTypeScript\obj\Debug\PhaserTypeScript.pdb
