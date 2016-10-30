@@ -11,9 +11,9 @@
 class State extends Phaser.State {
 
     private static CANNON_SPEED = 2;
-    private static MISSILE_SPEED = 6;
+    private static MISSILE_SPEED = 8;
 
-    private static NUMBER_OF_DRONES = 5; 
+    private static NUMBER_OF_DRONES = 8; 
     private static NUMBER_OF_MISSILES = 10; 
 
     private _cannon: Phaser.Sprite;
@@ -95,7 +95,8 @@ class State extends Phaser.State {
             body.setCollisionGroup(this._dronesCollisionGroup);
             // adds group drones will collide with and callback
             body.collides(this._missilesCollisionGroup, this.hitDron, this);
-            //body.debug = true;
+          //  body.debug = true;
+
         }, this);
 
         // missiles group
@@ -167,10 +168,16 @@ class State extends Phaser.State {
 
        var dron:Dron = (<Dron>aObject1.sprite); 
        var sprite: Phaser.Sprite = (<Phaser.Sprite>aObject2.sprite); 
-       console.log(dron, sprite); 
-       //dron.explode();
-       //sprite.kill();
-      
+
+     //  console.log(dron, sprite); 
+
+       try {
+           dron.explode(); 
+           sprite.kill(); 
+       }
+       catch (e) {
+           console.log(e.message);   
+       }
     }
 
 
@@ -215,6 +222,8 @@ class Dron extends Phaser.Sprite {
     }
 
     public explode() {
+
+    //    console.log("exploding "); 
         // remove movement tweens
         this.game.tweens.removeFrom(this.body);
         // explode dron and kill it on complete

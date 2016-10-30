@@ -73,7 +73,7 @@ var State = (function (_super) {
             body.setCollisionGroup(this._dronesCollisionGroup);
             // adds group drones will collide with and callback
             body.collides(this._missilesCollisionGroup, this.hitDron, this);
-            //body.debug = true;
+            //  body.debug = true;
         }, this);
         // missiles group
         this._missiles = this.add.group();
@@ -134,13 +134,18 @@ var State = (function (_super) {
         // explode dron and remove missile - kill it, not destroy
         var dron = aObject1.sprite;
         var sprite = aObject2.sprite;
-        console.log(dron, sprite);
-        //dron.explode();
-        //sprite.kill();
+        //  console.log(dron, sprite); 
+        try {
+            dron.explode();
+            sprite.kill();
+        }
+        catch (e) {
+            console.log(e.message);
+        }
     };
     State.CANNON_SPEED = 2;
-    State.MISSILE_SPEED = 6;
-    State.NUMBER_OF_DRONES = 5;
+    State.MISSILE_SPEED = 8;
+    State.NUMBER_OF_DRONES = 8;
     State.NUMBER_OF_MISSILES = 10;
     return State;
 }(Phaser.State));
@@ -178,6 +183,7 @@ var Dron = (function (_super) {
         this.play("anim");
     };
     Dron.prototype.explode = function () {
+        //    console.log("exploding "); 
         // remove movement tweens
         this.game.tweens.removeFrom(this.body);
         // explode dron and kill it on complete
